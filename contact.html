@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<title> Amrit Singh </title>
+		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="animations.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+		<style>
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+}
+
+
+li {
+    display: inline;
+    padding: 50px;
+}
+
+
+li a {
+ 	text-decoration: none;
+  color:white;
+  font-size: 18px;
+  font-variant: small-caps;
+  font-family: 'Play', sans-serif;
+ }
+
+
+body {
+  background-image: url("back.jpeg");
+  background-repeat: local;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+div {
+  text-align: center
+}
+
+
+
+#object{
+  visibility: hidden;
+}
+
+img {
+  position: absolute;
+  max-width: 80px;
+}
+
+div.relative {
+    position: relative;
+    width: 450px;
+    height: 90px;
+    left: 37%;
+} 
+
+
+div.absolute {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 360px;
+    height: 50px;
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+  
+<div>
+<ul>
+  <li><a href="index.html">Home</a></li> 
+  <li><a href="about.html">About</a></li> 
+  <li><a href="contact.html">Contact</a></li> 
+  <li><a href="work.html">Work</a></li>
+</div>
+
+
+
+
+  
+
+<div class="stretchRight">
+<div class="relative">
+  <img style="position:absolute; left:20px; " SRC="mail.png">
+  <div class="absolute" style="color:white ">You can contact me at <strong>asingh2066@gmail.com</strong></div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="stretchRight">
+<div class="relative">
+  <img style="position:absolute; left:20px; " SRC="phone.png">
+  <div class="absolute" style="color:white ">You can contact me at <strong>asingh2066@gmail.com</strong></div>
+</div>
+</div>
+
+
+       
+
+<script>
+  $(window).scroll(function() {
+    $('#relative').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+900) {
+        $(this).addClass("stretchRight");
+      }
+    });
+  });
+</script>
+
+
+</body>
+
+
+</html>

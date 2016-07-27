@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<title> Amrit Singh </title>
+		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="animations.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+		<style>
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+}
+
+
+li {
+    display: inline;
+    padding: 50px;
+}
+
+
+li a {
+ 	text-decoration: none;
+  color:white;
+  font-size: 18px;
+  font-variant: small-caps;
+  font-family: 'Play', sans-serif;
+ }
+
+
+body {
+  background-image: url("khalsa.jpg");
+  background-repeat: local;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+div {
+  text-align: center
+}
+
+
+
+#object{
+  visibility: hidden;
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+  
+<div>
+<ul>
+  <li><a href="index.html">Home</a></li> 
+  <li><a href="about.html">About</a></li> 
+  <li><a href="contact.html">Contact</a></li> 
+  <li><a href="work.html">Work</a></li>
+</div>
+
+
+<div id="object" class="fadeIn">
+<img style="padding-top: 70px"  src="name.png" />
+</div>
+
+
+
+
+       
+
+<script>
+  $(window).scroll(function() {
+    $('#object').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+900) {
+        $(this).addClass("slideUp");
+      }
+    });
+  });
+</script>
+
+
+</body>
+
+
+</html>
